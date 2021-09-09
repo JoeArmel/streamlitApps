@@ -18,13 +18,13 @@ st.set_page_config(layout="wide")
 image = Image.open('logo.png')
 
 st.image(image, width=None)
-st.title('Prix Crypto Monnaie App')
+st.title('Prix Crypto Monnaie')
 st.markdown("""
 Cette application récupère le prix des top 100 crypto monnaies à partir des données disponoibles sur **CoinMarketCap**! 
 """)
 
 # A propos
-expander_bar = st.expander("A propos de l'App")
+expander_bar = st.expander("A propos...")
 expander_bar.markdown("""
 * **Librairies Python:** base64, Pandas, streamlit, numpy, matplotlib, requests, Beautifullsoup, json, time, PIL
 * **Source des données:** [CoinMarketCap](https://coinmarketcap.com/).

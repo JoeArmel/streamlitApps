@@ -8,7 +8,7 @@ col1, col2 = st.columns((1, 6))
 
 
 image = Image.open('irislogo.jpg')
-col1.image(image,  use_column_width='True')
+col1.image(image, width=None)
 
 
 col2.title('App de Prédiction de Fleurs d’Iris')
