@@ -6,9 +6,10 @@ import seaborn as sns
 import numpy as np
 import yfinance as yf
 
-st.title('Standard and Poor\'s (S&P) 500 App')
+st.title('Standard and Poor\'s 500 App')
 
 st.markdown("""
+\n
 Cette application récupère de Wikipedia, la liste des entreprises ou compagnies appartenant à **S&P 500** et 
 leur **cours à la fermeture (stock closing price)** (year-to-date)!
 * **Librairies Python:** base64, Pandas, streamlit, numpy, matplotlib, seaborn, yfinance
@@ -43,7 +44,7 @@ selected_sector = st.sidebar.multiselect('Secteur d\'activité', sorted_unique_s
 # Filtering data
 df_selected_sector = df[(df['GICS Sector'].isin(selected_sector))]
 
-st.header('Affichage des Entrepises par Secteur(s) Sélctionnée(s)')
+st.header('Entrepises par secteur(s) sélctionnée(s)')
 st.write('Taille des données: ' + str(df_selected_sector.shape[0]) + ' lignes et ' +
          str(df_selected_sector.shape[1]) + ' colonnes.')
 st.dataframe(df_selected_sector)
@@ -87,10 +88,10 @@ def price_plot(symbol):
     return st.pyplot(f)
 
 
-num_company = st.sidebar.slider('Nombre d\entreprises', 1, 10)
+num_company = st.sidebar.slider('Nombre d\'entreprises', 1, 10)
 
 if st.button('Visualier les cours'):
-    st.header('Cours des Prix à la Clôture') # Stock closing Price
+    st.header('Cours des prix à la clôture') # Stock closing Price
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
 
