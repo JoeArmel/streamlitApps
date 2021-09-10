@@ -2,16 +2,23 @@ import streamlit as st
 import pandas as pd
 import base64
 import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
+from PIL import Image
+# import seaborn as sns
+# import numpy as np
 import yfinance as yf
 
-st.title('Standard and Poor\'s 500 App')
+# Mise en page
+# Division de l'entête en deux colonnes. Une pour le logo et l'autre pour le titre
+col1, col2 = st.columns((1, 6))
+
+image = Image.open('sp500logo.jpg')
+col1.image(image, width=None)
+col2.title('Standard and Poor\'s 500 App')
 
 st.markdown("""
 \n
-Cette application récupère de Wikipedia, la liste des entreprises ou compagnies appartenant à **S&P 500** et 
-leur **cours à la fermeture (stock closing price)** (year-to-date)!
+Cette application récupère de Wikipedia, la liste des grandes entreprises dont les performances sont suivies par 
+l'indice boursier **S&P 500** ainsi que leur **cours à la cloture (stock closing price)**.
 * **Librairies Python:** base64, Pandas, streamlit, numpy, matplotlib, seaborn, yfinance
 * **Source des données:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
 """)
@@ -34,7 +41,7 @@ def load_data():
 df = load_data()
 
 # Regroupement des entreprises par secteur d'activité
-# GICS sector =  Global Industry Classification Sector
+# GICS Sector =  Global Industry Classification Sector
 sector = df.groupby('GICS Sector')
 
 # Sidebar - Sector selection -- Box pour la sélection du secteur d'activité
