@@ -3,16 +3,14 @@ import pandas as pd
 import base64
 import matplotlib.pyplot as plt
 from PIL import Image
-# import seaborn as sns
-# import numpy as np
 import yfinance as yf
 
 # Mise en page
 # Division de l'entête en deux colonnes. Une pour le logo et l'autre pour le titre
 col1, col2 = st.columns((1, 6))
 
-image = Image.open('.\sp500logo.jpg')
-col1.image(image, width=None)
+image = Image.open('sp500logo.jpg')
+col1.image(image, width=200, output_format='auto')
 col2.title('Standard and Poor\'s 500 App')
 
 st.markdown("""
