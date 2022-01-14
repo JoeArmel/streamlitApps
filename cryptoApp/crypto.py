@@ -17,7 +17,7 @@ st.set_page_config(layout="wide")
 # Titre
 image = Image.open('logo.png')
 
-st.image(image, width=None)
+#st.image(image, width=None)
 st.title('Prix Crypto Monnaie')
 st.markdown("""
 Cette application récupère le prix des top 100 crypto monnaies à partir des données disponoibles sur **CoinMarketCap**! 
