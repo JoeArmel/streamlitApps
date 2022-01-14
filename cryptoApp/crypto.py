@@ -15,9 +15,9 @@ import time
 st.set_page_config(layout="wide")
 
 # Titre
-#image = Image.open('logo.png')
+image = Image.open('logo.png')
 
-#st.image(image, width=None)
+st.image(image, width=None)
 st.title('Prix Crypto Monnaie')
 st.markdown("""
 Cette application récupère le prix des top 100 crypto monnaies à partir des données disponoibles sur **CoinMarketCap**! 
@@ -59,9 +59,8 @@ def load_data():
     coin_data = json.loads(data.contents[0])
     listings = coin_data['props']['initialState']['cryptocurrency']['listingLatest']['data']
     for i in listings:
-        #coins[str(i['id'])] = i['slug']
-        coins[i['id']] = i['slug']
-
+        coins[str(i['id'])] = i['slug']
+        
     nom = []
     accronyme = []
     capitalisation = []
