@@ -57,11 +57,11 @@ def load_data():
     data = soup.find('script', id='__NEXT_DATA__', type='application/json')
     coins = {}
     coin_data = json.loads(data.contents[0])
-    #coin_data
+    coin_data
     listings = coin_data['props']['initialState']['cryptocurrency']['listingLatest']['data']
     #print(listings)
     for i in listings:
-        coins[i['id']] = i['slug']
+        coins(str(i['id']) = i['slug']
         
     nom = []
     accronyme = []
