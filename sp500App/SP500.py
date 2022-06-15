@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 import matplotlib.pyplot as plt
-#from PIL import Image
+from PIL import Image
 import yfinance as yf
 
 # Mise en page
