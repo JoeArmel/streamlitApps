@@ -17,7 +17,7 @@ st.set_page_config(layout="wide")
 # Titre
 img = Image.open("cryptoApp/logo.png", "r")
 
-st.image(img, caption="Bitcoin golden image")
+st.image(img, width=None)
 st.title('Prix Crypto Monnaie')
 st.markdown("""
 Cette application récupère le prix des top 100 crypto monnaies à partir des données disponoibles sur **CoinMarketCap**! 
