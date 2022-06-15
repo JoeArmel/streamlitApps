@@ -61,7 +61,7 @@ def load_data():
     listings = coin_data['props']['initialState']['cryptocurrency']['listingLatest']['data']
     #print(listings)
     for i in listings:
-        coins(str(i['id'])) = i['slug']
+        coins[i['id']] = i['slug']
         
     nom = []
     accronyme = []
