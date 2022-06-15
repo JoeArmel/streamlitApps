@@ -15,7 +15,7 @@ import time
 st.set_page_config(layout="wide")
 
 # Titre
-img = Image.open("logo.png", "r")
+img = Image.open("logo.png", "rb")
 
 st.image(img, caption='Bitcoin golden image', width=None)
 st.title('Prix Crypto Monnaie')
