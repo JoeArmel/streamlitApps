@@ -10,7 +10,7 @@ import yfinance as yf
 col1, col2 = st.columns((2, 6))
 
 image = Image.open('sp500App/sp500logo.jpg')
-col1.image(image, width=180, output_format='auto')
+col1.image(image, width=150, output_format='auto')
 col2.title('Standard and Poor\'s 500 App')
 #st.title('Standard and Poor\'s 500 App')
 
