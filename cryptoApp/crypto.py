@@ -80,18 +80,18 @@ def load_data():
         capitalisation.append(i['quote'][currency_price_unit]['marketCap'])
         volume_24h.append(i['quote'][currency_price_unit]['volume24h'])
 
-    df = pd.DataFrame(
+    df1 = pd.DataFrame(
         columns=['nom', 'accronyme', 'capitalisation', 'taux_change_1h', 'taux_change_24h', 'taux_change_7j', 'prix',
                  'volume_24h'])
-    df['nom'] = nom
-    df['accronyme'] = accronyme
-    df['capitalisation'] = capitalisation
-    df['taux_change_1h'] = taux_change_1h
-    df['taux_change_24h'] = taux_change_24h
-    df['taux_change_7j'] = taux_change_7j
-    df['prix'] = prix
-    df['volume_24h'] = volume_24h
-    return df
+    df1['nom'] = nom
+    df1['accronyme'] = accronyme
+    df1['capitalisation'] = capitalisation
+    df1['taux_change_1h'] = taux_change_1h
+    df1['taux_change_24h'] = taux_change_24h
+    df1['taux_change_7j'] = taux_change_7j
+    df1['prix'] = prix
+    df1['volume_24h'] = volume_24h
+    return df1
 
 
 # Chargement des données dans la variable dataframe nommée df
