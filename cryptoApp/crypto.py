@@ -57,8 +57,9 @@ def load_data():
     data = soup.find('script', id='__NEXT_DATA__', type='application/json')
     coins = {}
     coin_data = json.loads(data.contents[0])
-    coin_data
+    #coin_data
     listings = coin_data['props']['initialState']['cryptocurrency']['listingLatest']['data']
+    listings
     for i in listings:
         coins[str(i['id'])] = i['slug']
         
