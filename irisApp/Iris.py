@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 col1, col2 = st.columns((1, 6))
 
 
-image = Image.open('irislogo.jpg')
+image = Image.open('irisApp/irislogo.jpg')
 col1.image(image, width=None)
 
 
